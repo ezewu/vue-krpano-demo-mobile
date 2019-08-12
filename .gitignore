@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+static/krpano/c/panos/
+static/krpano/d/panos/
+/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
