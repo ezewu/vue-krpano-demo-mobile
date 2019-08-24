@@ -1,7 +1,6 @@
 # vue-krpano-demo-mobile
 
-> vue krpano结合一起的一个安例,鸣谢vue-krpano。
-请用谷歌浏览器，打开发者模式，并且调出手机端测试界面 
+> vue与krpano结合 手机端案例,鸣谢vue-krpano 请用谷歌浏览器 打开发者模式 并且调出手机端测试界面。
 
 
 

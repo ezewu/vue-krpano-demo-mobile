@@ -2,19 +2,19 @@
 
 	<include url="../additional.xml"></include>
 
-	<scene name="scene_001" title="入户花园" onstart="" thumburl="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/001.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_001" title="入户花园" onstart="" thumburl="http://krpano.deyou360.com/qingjiangzhixing/panos/001.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="71.445" vlookat="0.631" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/001.tiles/preview.jpg" />
+		<preview url="http://krpano.deyou360.com/qingjiangzhixing/panos/001.tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 		
 			<level tiledimagewidth="1600" tiledimageheight="1600">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/001.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/001.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="768" tiledimageheight="768">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/001.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/001.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 		<hotspot name="spot1" style="new_spotd11_gif"  ath="-148" atv="-11.267" linkedscene="scene_002" />
@@ -22,18 +22,18 @@
 
 	</scene>
 
-	<scene name="scene_002" title="客餐厅" onstart="" thumburl="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/002.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_002" title="客餐厅" onstart="" thumburl="http://krpano.deyou360.com/qingjiangzhixing/panos/002.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/002.tiles/preview.jpg" />
+		<preview url="http://krpano.deyou360.com/qingjiangzhixing/panos/002.tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="1600" tiledimageheight="1600">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/002.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/002.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="768" tiledimageheight="768">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/002.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/002.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 		<hotspot name="spot1" style="new_spotd07_gif" ath="-132" atv="-10" linkedscene="scene_001" />
@@ -45,36 +45,36 @@
 
 	</scene>
 
-	<scene name="scene_003" title="厨房" onstart="" thumburl="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/003.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_003" title="厨房" onstart="" thumburl="http://krpano.deyou360.com/qingjiangzhixing/panos/003.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/003.tiles/preview.jpg" />
+		<preview url="http://krpano.deyou360.com/qingjiangzhixing/panos/003.tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="1600" tiledimageheight="1600">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/003.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/003.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="768" tiledimageheight="768">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/003.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/003.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 		<hotspot name="spot1" style="new_spotd07_gif" ath="-136.815" atv="-5.685" linkedscene="scene_002" />
 
 	</scene>
 
-	<scene name="scene_004" title="主卧" onstart="" thumburl="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/004.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_004" title="主卧" onstart="" thumburl="http://krpano.deyou360.com/qingjiangzhixing/panos/004.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/004.tiles/preview.jpg" />
+		<preview url="http://krpano.deyou360.com/qingjiangzhixing/panos/004.tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="1792" tiledimageheight="1792">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/004.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/004.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="768" tiledimageheight="768">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/004.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/004.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 		<hotspot name="spot1" style="new_spotd07_gif" ath="110.016" atv="1.329" linkedscene="scene_002" />
@@ -82,71 +82,71 @@
 
 	</scene>
 
-	<scene name="scene_005" title="次卧" onstart="" thumburl="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/005.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_005" title="次卧" onstart="" thumburl="http://krpano.deyou360.com/qingjiangzhixing/panos/005.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/005.tiles/preview.jpg" />
+		<preview url="http://krpano.deyou360.com/qingjiangzhixing/panos/005.tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="1792" tiledimageheight="1792">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/005.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/005.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="768" tiledimageheight="768">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/005.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/005.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 		<hotspot name="spot1" style="new_spotd07_gif" ath="51.008" atv="-10.306" linkedscene="scene_002" />
 
 	</scene>
 
-	<scene name="scene_006" title="客卧" onstart="" thumburl="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/006.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_006" title="客卧" onstart="" thumburl="http://krpano.deyou360.com/qingjiangzhixing/panos/006.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/006.tiles/preview.jpg" />
+		<preview url="http://krpano.deyou360.com/qingjiangzhixing/panos/006.tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="1792" tiledimageheight="1792">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/006.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/006.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="768" tiledimageheight="768">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/006.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/006.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 		<hotspot name="spot1" style="new_spotd07_gif" ath="129.976" atv="-2.142" linkedscene="scene_002" />
 
 	</scene>
 
-	<scene name="scene_007" title="主卫" onstart="" thumburl="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/007.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_007" title="主卫" onstart="" thumburl="http://krpano.deyou360.com/qingjiangzhixing/panos/007.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/007.tiles/preview.jpg" />
+		<preview url="http://krpano.deyou360.com/qingjiangzhixing/panos/007.tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="1792" tiledimageheight="1792">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/007.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/007.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="768" tiledimageheight="768">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/007.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/007.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 		<hotspot name="spot1" style="new_spotd07_gif" ath="90.466" atv="-5.268" linkedscene="scene_002" />
 	</scene>
 
-	<scene name="scene_008" title="客卫" onstart="" thumburl="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/008.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_008" title="客卫" onstart="" thumburl="http://krpano.deyou360.com/qingjiangzhixing/panos/008.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/008.tiles/preview.jpg" />
+		<preview url="http://krpano.deyou360.com/qingjiangzhixing/panos/008.tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="1600" tiledimageheight="1600">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/008.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/008.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="768" tiledimageheight="768">
-				<cube url="http://p8phkhzp9.bkt.clouddn.com/qingjiangzhixing/panos/008.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="http://krpano.deyou360.com/qingjiangzhixing/panos/008.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 		<hotspot name="spot1" style="new_spotd07_gif" ath="80.466" atv="-5.268" linkedscene="scene_002" />

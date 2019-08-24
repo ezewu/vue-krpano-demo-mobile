@@ -3,7 +3,7 @@
     <contextmenu fullscreen="false" versioninfo="false"/>
 
     <style name="new_spotd11_gif" 
-        url="http://p8phkhzp9.bkt.clouddn.com/new_spotd11_gif.png" 
+        url="http://krpano.deyou360.com/new_spotd11_gif.png" 
         scale="0.7"
         edge="top"
         distorted="true"
@@ -15,7 +15,7 @@
 
 
     <style name="new_spotd07_gif" 
-        url="http://p8phkhzp9.bkt.clouddn.com/new_spotd07_gif.png"
+        url="http://krpano.deyou360.com/new_spotd07_gif.png"
         scale="0.7"
         edge="top"
         distorted="true"
@@ -28,7 +28,7 @@
 
     <style name="new_static_hotspot" 
         scale="0.4"
-        url="http://p8phkhzp9.bkt.clouddn.com/tip.png"
+        url="http://krpano.deyou360.com/tip.png"
         edge="top"
         distorted="true"
         onover="tween(scale,0.55);"
