@@ -1,7 +1,7 @@
 <template>
   <div class="krpano-wrapper">
     <div class="topbar">
-      
+
       <div class="close-wrapper">
         <span @click.stop="handletoggleRemove" class="icon close"></span>
         <span @click.stop="toggleGyro" class="icon" :class="gyroStyle"></span>
@@ -23,7 +23,7 @@ export default {
       type: String
     }
   },
-  data() {
+  data () {
     const self = this
     return {
       krpanoObj: '',
@@ -32,37 +32,37 @@ export default {
       gyroEnabled: false,
       isClick: true,
       hooks: {
-        sceneChanged(scene) {
+        sceneChanged (scene) {
           self.sceneChanged(scene)
         },
-        viewerResized() {
+        viewerResized () {
           self.viewerResized()
         },
-        toggleFullscreen() {
+        toggleFullscreen () {
           self.toggleFullscreen()
         },
-        onxmlcomplete() {
+        onxmlcomplete () {
           self.onxmlcomplete()
         },
-        clickHotspot(name) {
+        clickHotspot (name) {
           self.clickHotspot(name)
         }
       }
     }
   },
   methods: {
-    initq(krpano) {
+    initq (krpano) {
       this.krpanoObj = krpano
     },
-    sceneChanged(scene) {},
-    viewerResized() {},
-    toggleFullscreen() {
+    sceneChanged (scene) {},
+    viewerResized () {},
+    toggleFullscreen () {
       this.toggleFull = true
     },
-    onxmlcomplete() {
+    onxmlcomplete () {
       this.initKrpano()
     },
-    handletoggleRemove() {
+    handletoggleRemove () {
       const { removepano } = window
       if (this.krpanoObj) {
         removepano(this.krpanoObj.id)
@@ -70,7 +70,7 @@ export default {
       }
       this.$emit('remove')
     },
-    initKrpano() {
+    initKrpano () {
       if (this.sceneValue.length) {
         return
       }
@@ -82,32 +82,32 @@ export default {
         this.sceneValue.push({ name, title, thumburl })
       }
     },
-    clickHotspot(name) {
+    clickHotspot (name) {
       this.sceneIndex = this.sceneValue.findIndex(item => {
         return item.name === name
       })
       this.upScene()
     },
-    //上一场景
-    handlePrev() {
+    // 上一场景
+    handlePrev () {
       if (this.sceneIndex !== 0 && this.sceneIndex >= 0 && this.isClick) {
         this.sceneIndex--
         this.isClick = false
         this.upScene()
       }
     },
-    handleNext() {
+    handleNext () {
       if (this.sceneIndex < this.sceneValue.length - 1 && this.isClick) {
         this.sceneIndex++
         this.isClick = false
         this.upScene()
       }
     },
-    toggleGyro() {
+    toggleGyro () {
       this.gyroEnabled = !this.gyroEnabled
       this.krpanoObj.set(`plugin[gyro].enabled`, this.gyroEnabled)
     },
-    upScene() {
+    upScene () {
       this.krpanoObj.call(
         `loadscene(${
           this.sceneValue[this.sceneIndex].name
@@ -117,17 +117,19 @@ export default {
     }
   },
   computed: {
-    nextStyle() {
+    nextStyle () {
       if (this.sceneIndex === this.sceneValue.length - 1) {
         return 'novalue'
       }
+      return ''
     },
-    prevStyle() {
+    prevStyle () {
       if (this.sceneIndex === 0) {
         return 'novalue'
       }
+      return ''
     },
-    gyroStyle() {
+    gyroStyle () {
       if (!this.gyroEnabled) {
         return 'gyro'
       } else {

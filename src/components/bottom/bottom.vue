@@ -1,7 +1,7 @@
 <template>
     <div class="bottom-wrapper">
         <router-view></router-view>
-        
+
         <div class="tab">
             <div class="tab-item">
                 <router-link tag="div" to="/shangjie">
@@ -44,7 +44,6 @@ export default {
 }
 </script>
 
-
 <style lang="stylus" scoped>
 .tab
     position fixed
@@ -74,4 +73,3 @@ export default {
             margin-bottom 4px
             font-size 20px
 </style>
-

@@ -6,7 +6,6 @@
     </div>
 </template>
 
-
 <script>
 export default {
   props: {
@@ -17,7 +16,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="stylus" scoped>
 .tip

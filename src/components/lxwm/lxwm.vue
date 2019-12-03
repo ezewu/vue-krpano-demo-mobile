@@ -5,7 +5,7 @@
                 <span class="image"></span>
             </div>
         </div>
-        
+
         <div @click="phoneCall" class="tel">
             <i class="iconfont icon-lianxi1 tel-icon"></i>
             <span class="text">点击致电营销中心</span>
@@ -21,13 +21,12 @@
 <script>
 export default {
   methods: {
-    phoneCall() {
+    phoneCall () {
       window.location.href = 'tel:07174778899'
     }
   }
 }
 </script>
-
 
 <style lang="stylus" scoped>
 .lxwm-wrapper

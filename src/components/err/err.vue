@@ -9,7 +9,6 @@
 export default {}
 </script>
 
-
 <style lang="stylus" scoped>
 .err
     position fixed

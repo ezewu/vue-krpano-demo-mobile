@@ -1,7 +1,7 @@
 <template>
     <div class="quyu" ref="quyuWrapper">
         <div>
-            
+
             <div class="content">
                 <div class="quyu-a-wrapper">
                     <img class="image" @load="refScroll" src=" http://krpano.deyou360.com/ydkrpano/quyu-a.png">
@@ -29,18 +29,18 @@ import BScroll from 'better-scroll'
 import bordertip from '@/bordertip/bordertip'
 import tiptext from '@/tiptext/tiptext'
 export default {
-  mounted() {
+  mounted () {
     this.$nextTick(() => {
       this._initScoll()
     })
   },
   methods: {
-    refScroll() {
+    refScroll () {
       this.$nextTick(() => {
         this._initScoll()
       })
     },
-    _initScoll() {
+    _initScoll () {
       if (!this.shangScroll) {
         this.shangScroll = new BScroll(this.$refs.quyuWrapper, {
           click: true
@@ -56,7 +56,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="stylus" scoped>
 .quyu
@@ -131,4 +130,3 @@ export default {
     100%
         transform scale(1)
 </style>
-

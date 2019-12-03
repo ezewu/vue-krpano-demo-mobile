@@ -5,7 +5,6 @@
   </div>
 </template>
 
-
 <script>
 import cover from '@/cover/cover'
 import bottom from '@/bottom/bottom'

@@ -8,7 +8,7 @@ import Krpano from 'vue-krpano'
 import preview from 'vue-photo-preview'
 
 import 'vue-photo-preview/dist/skin.css'
-import '#/stylus/index'
+import '#/stylus/index.styl'
 
 Vue.config.productionTip = false
 let options = {
@@ -26,8 +26,5 @@ Vue.prototype.$axios = axios
 new Vue({
   el: '#app',
   router,
-  components: {
-    App
-  },
-  template: '<App/>'
+  render: h => h(App)
 })

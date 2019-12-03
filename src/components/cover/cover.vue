@@ -16,27 +16,26 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       cover: true
     }
   },
-  mounted() {
+  mounted () {
     this.time = setTimeout(() => {
       this.cover = false
     }, 3000)
   },
   methods: {
-    handleHideCover() {
+    handleHideCover () {
       this.cover = false
     }
   },
-  beforeDestroy() {
+  beforeDestroy () {
     clearTimeout(this.time)
   }
 }
 </script>
-
 
 <style lang="stylus" scoped>
 .cover-wrapper

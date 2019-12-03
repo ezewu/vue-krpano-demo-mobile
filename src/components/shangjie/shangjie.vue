@@ -1,7 +1,7 @@
 <template>
   <div class="shangjie" ref="shangWrapper">
     <div>
-      
+
       <div class="title-wrapper">
         <video ref="video" class="video" src="http://krpano.deyou360.com/ydkrpano/1534840407832.mp4" controls="controls" x5-playsinline="" playsinline="" webkit-playsinline="" preload="auto"></video>
 
@@ -47,22 +47,22 @@ import bordertip from '@/bordertip/bordertip'
 import { wxConfig } from '#/js/wxconfig'
 export default {
   mixins: [wxConfig],
-  data() {
+  data () {
     return {}
   },
-  mounted() {
+  mounted () {
     this.$nextTick(() => {
       this._initScoll()
     })
   },
 
   methods: {
-    refScroll() {
+    refScroll () {
       this.$nextTick(() => {
         this._initScoll()
       })
     },
-    _initScoll() {
+    _initScoll () {
       if (!this.shangScroll) {
         this.shangScroll = new BScroll(this.$refs.shangWrapper, {
           click: true,
@@ -74,7 +74,7 @@ export default {
     }
   },
   computed: {
-    player() {
+    player () {
       return this.$refs.video
     }
   },
