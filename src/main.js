@@ -1,5 +1,3 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
 import router from './router'
@@ -11,11 +9,11 @@ import 'vue-photo-preview/dist/skin.css'
 import '#/stylus/index.styl'
 
 Vue.config.productionTip = false
-let options = {
+const options = {
   captionEl: false,
   shareEl: false,
   fullscreenEl: false,
-  timeToIdle: 4000
+  timeToIdle: 4000,
 }
 
 Vue.use(Krpano)
@@ -26,5 +24,5 @@ Vue.prototype.$axios = axios
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  render: h => h(App),
 })

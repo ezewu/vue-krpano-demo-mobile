@@ -1,9 +1,9 @@
 <template>
-    <div class="tip">
-        <div class="line"></div>
-        <div class="text">{{text}}</div>
-        <div class="line"></div>
-    </div>
+  <div class="tip">
+    <div class="line" />
+    <div class="text">{{ text }}</div>
+    <div class="line" />
+  </div>
 </template>
 
 <script>
@@ -11,9 +11,9 @@ export default {
   props: {
     text: {
       type: String,
-      default: '这是标题'
-    }
-  }
+      default: '这是标题',
+    },
+  },
 }
 </script>
 

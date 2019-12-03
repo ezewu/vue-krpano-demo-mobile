@@ -9,14 +9,14 @@
 
 
 
-### 本地运行
+## 本地运行
 
 ``` bash
 # 安装运行依懒
 npm i
 
 # 启动运行，监听在8080端口
-npm run dev
+npm run serve
 
 # 打包部署
 npm run build
@@ -26,5 +26,5 @@ npm run build
 
 
 
-##### 如果有帮助到你请给我一个start 谢谢！
+## 如果有帮助到你请给我一个start 谢谢！
 

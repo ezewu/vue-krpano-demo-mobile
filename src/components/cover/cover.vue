@@ -1,39 +1,39 @@
 <template>
 
-    <transition name="cover">
-        <div @click="handleHideCover" v-if="cover" class="cover-wrapper">
-            <div class="img-top-wrapper">
-                <span class="image"></span>
-            </div>
-            <div class="img-bottom-wrapper">
-                <div class="img-wrapper">
-                    <span class="image"></span>
-                </div>
-            </div>
+  <transition name="cover">
+    <div v-if="cover" class="cover-wrapper" @click="handleHideCover">
+      <div class="img-top-wrapper">
+        <span class="image" />
+      </div>
+      <div class="img-bottom-wrapper">
+        <div class="img-wrapper">
+          <span class="image" />
         </div>
-    </transition>
+      </div>
+    </div>
+  </transition>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      cover: true
+      cover: true,
     }
   },
-  mounted () {
+  mounted() {
     this.time = setTimeout(() => {
       this.cover = false
     }, 3000)
   },
-  methods: {
-    handleHideCover () {
-      this.cover = false
-    }
-  },
-  beforeDestroy () {
+  beforeDestroy() {
     clearTimeout(this.time)
-  }
+  },
+  methods: {
+    handleHideCover() {
+      this.cover = false
+    },
+  },
 }
 </script>
 

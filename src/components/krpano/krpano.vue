@@ -3,16 +3,22 @@
     <div class="topbar">
 
       <div class="close-wrapper">
-        <span @click.stop="handletoggleRemove" class="icon close"></span>
-        <span @click.stop="toggleGyro" class="icon" :class="gyroStyle"></span>
+        <span class="icon close" @click.stop="handletoggleRemove" />
+        <span class="icon" :class="gyroStyle" @click.stop="toggleGyro" />
       </div>
     </div>
     <div class="bottombar">
-      <span @click.stop="handlePrev" class="bottombar prev" :class="prevStyle"></span>
-      <span v-if="sceneValue.length" class="title">{{sceneValue[sceneIndex].title}}</span>
-      <span @click.stop="handleNext" class="bottombar next" :class="nextStyle"></span>
+      <span class="bottombar prev" :class="prevStyle" @click.stop="handlePrev" />
+      <span v-if="sceneValue.length" class="title">{{ sceneValue[sceneIndex].title }}</span>
+      <span class="bottombar next" :class="nextStyle" @click.stop="handleNext" />
     </div>
-    <krpano :consolelog="true" :mwheel="true" :hooks="hooks" :xml="xml" @panoCreated="initq"></krpano>
+    <krpano
+      :consolelog="true"
+      :mwheel="true"
+      :hooks="hooks"
+      :xml="xml"
+      @panoCreated="initq"
+    />
   </div>
 </template>
 
@@ -20,10 +26,11 @@
 export default {
   props: {
     xml: {
-      type: String
-    }
+      type: String,
+      default: '',
+    },
   },
-  data () {
+  data() {
     const self = this
     return {
       krpanoObj: '',
@@ -32,37 +39,58 @@ export default {
       gyroEnabled: false,
       isClick: true,
       hooks: {
-        sceneChanged (scene) {
+        sceneChanged(scene) {
           self.sceneChanged(scene)
         },
-        viewerResized () {
+        viewerResized() {
           self.viewerResized()
         },
-        toggleFullscreen () {
+        toggleFullscreen() {
           self.toggleFullscreen()
         },
-        onxmlcomplete () {
+        onxmlcomplete() {
           self.onxmlcomplete()
         },
-        clickHotspot (name) {
+        clickHotspot(name) {
           self.clickHotspot(name)
-        }
-      }
+        },
+      },
     }
   },
+  computed: {
+    nextStyle() {
+      if (this.sceneIndex === this.sceneValue.length - 1) {
+        return 'novalue'
+      }
+      return ''
+    },
+    prevStyle() {
+      if (this.sceneIndex === 0) {
+        return 'novalue'
+      }
+      return ''
+    },
+    gyroStyle() {
+      if (!this.gyroEnabled) {
+        return 'gyro'
+      } else {
+        return 'gyro-active'
+      }
+    },
+  },
   methods: {
-    initq (krpano) {
+    initq(krpano) {
       this.krpanoObj = krpano
     },
-    sceneChanged (scene) {},
-    viewerResized () {},
-    toggleFullscreen () {
+    sceneChanged(scene) {},
+    viewerResized() {},
+    toggleFullscreen() {
       this.toggleFull = true
     },
-    onxmlcomplete () {
+    onxmlcomplete() {
       this.initKrpano()
     },
-    handletoggleRemove () {
+    handletoggleRemove() {
       const { removepano } = window
       if (this.krpanoObj) {
         removepano(this.krpanoObj.id)
@@ -70,73 +98,52 @@ export default {
       }
       this.$emit('remove')
     },
-    initKrpano () {
+    initKrpano() {
       if (this.sceneValue.length) {
         return
       }
-      let count = this.krpanoObj.get('scene.count')
+      const count = this.krpanoObj.get('scene.count')
       for (let i = 0; i < count; i++) {
-        let name = this.krpanoObj.get(`scene[${i}].name`)
-        let title = this.krpanoObj.get(`scene[${i}].title`)
-        let thumburl = this.krpanoObj.get(`scene[${i}].thumburl`)
+        const name = this.krpanoObj.get(`scene[${i}].name`)
+        const title = this.krpanoObj.get(`scene[${i}].title`)
+        const thumburl = this.krpanoObj.get(`scene[${i}].thumburl`)
         this.sceneValue.push({ name, title, thumburl })
       }
     },
-    clickHotspot (name) {
+    clickHotspot(name) {
       this.sceneIndex = this.sceneValue.findIndex(item => {
         return item.name === name
       })
       this.upScene()
     },
     // 上一场景
-    handlePrev () {
+    handlePrev() {
       if (this.sceneIndex !== 0 && this.sceneIndex >= 0 && this.isClick) {
         this.sceneIndex--
         this.isClick = false
         this.upScene()
       }
     },
-    handleNext () {
+    handleNext() {
       if (this.sceneIndex < this.sceneValue.length - 1 && this.isClick) {
         this.sceneIndex++
         this.isClick = false
         this.upScene()
       }
     },
-    toggleGyro () {
+    toggleGyro() {
       this.gyroEnabled = !this.gyroEnabled
       this.krpanoObj.set(`plugin[gyro].enabled`, this.gyroEnabled)
     },
-    upScene () {
+    upScene() {
       this.krpanoObj.call(
         `loadscene(${
           this.sceneValue[this.sceneIndex].name
-        },null,MERGE,BLEND(0.5))`
+        },null,MERGE,BLEND(0.5))`,
       )
       this.isClick = true
-    }
+    },
   },
-  computed: {
-    nextStyle () {
-      if (this.sceneIndex === this.sceneValue.length - 1) {
-        return 'novalue'
-      }
-      return ''
-    },
-    prevStyle () {
-      if (this.sceneIndex === 0) {
-        return 'novalue'
-      }
-      return ''
-    },
-    gyroStyle () {
-      if (!this.gyroEnabled) {
-        return 'gyro'
-      } else {
-        return 'gyro-active'
-      }
-    }
-  }
 }
 </script>
 <style lang="stylus" scoped>

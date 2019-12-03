@@ -6,38 +6,38 @@ Vue.use(Router)
 const router = new Router({
   routes: [{
     path: '/',
-    redirect: '/shangjie'
+    redirect: '/shangjie',
   },
   {
     path: '/quyu',
     name: 'quyu',
-    component: () => import('@/quyu/quyu')
+    component: () => import('@/quyu/quyu'),
   },
   {
     path: '/shangjie',
     name: 'shangjie',
-    component: () => import('@/shangjie/shangjie')
+    component: () => import('@/shangjie/shangjie'),
   },
   {
     path: '/shinei',
     name: 'shinei',
-    component: () => import('@/shinei/shinei')
+    component: () => import('@/shinei/shinei'),
   },
   {
     path: '/lxwm',
     name: 'lxwm',
-    component: () => import('@/lxwm/lxwm')
+    component: () => import('@/lxwm/lxwm'),
   },
   {
     path: '/err',
     name: 'err',
-    component: () => import('@/err/err')
-  }
+    component: () => import('@/err/err'),
+  },
   ],
-  linkActiveClass: 'tab-active'
+  linkActiveClass: 'tab-active',
 })
 
-function browserRedirect () {
+function browserRedirect() {
   // eslint-disable-next-line
   let sUserAgent = navigator.userAgent.toLowerCase()
   // eslint-disable-next-line
@@ -81,7 +81,7 @@ router.beforeEach((to, from, next) => {
       return
     }
     next({
-      path: '/err'
+      path: '/err',
     })
   }
 })

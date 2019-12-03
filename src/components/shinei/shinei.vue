@@ -1,40 +1,40 @@
 <template>
-  <div class="shinei" ref="shineiWrapper">
+  <div ref="shineiWrapper" class="shinei">
     <div class="info-wrapper">
-      <h1 class="title">{{items[activeIndex].name}}</h1>
-      <p class="desc">{{items[activeIndex].desc}}</p>
+      <h1 class="title">{{ items[activeIndex].name }}</h1>
+      <p class="desc">{{ items[activeIndex].desc }}</p>
     </div>
 
     <div class="buttom-wrapper">
       <div class="panel">
-        <span @click="handlShowMap" class="item">点击户型图</span>
-        <span @click.stop="handleselectKrpano" class="item">点击精装展示</span>
+        <span class="item" @click="handlShowMap">点击户型图</span>
+        <span class="item" @click.stop="handleselectKrpano">点击精装展示</span>
       </div>
 
-      <tiptext text="点击按钮切换户型"></tiptext>
+      <tiptext text="点击按钮切换户型" />
 
       <div class="buttom-content">
         <div
-          @click.stop="hadnleSelect(index)"
-          :key="`items_${index}`"
           v-for="(item,index) of items"
+          :key="`items_${index}`"
           :class="{'active':index === activeIndex}"
           class="tab_item"
+          @click.stop="hadnleSelect(index)"
         >
-          <span>{{item.name}}</span>
-          <span v-show="index === 0" class="area">{{items[0].area}}</span>
-          <span v-show="index === 1" class="area">{{items[1].area}}</span>
+          <span>{{ item.name }}</span>
+          <span v-show="index === 0" class="area">{{ items[0].area }}</span>
+          <span v-show="index === 1" class="area">{{ items[1].area }}</span>
         </div>
       </div>
     </div>
     <div class="background">
-      <span class="image"></span>
+      <span class="image" />
     </div>
     <transition name="map">
-      <div @click="handleHide" v-show="showMap" class="map-wrapper">
+      <div v-show="showMap" class="map-wrapper" @click="handleHide">
         <div class="bar-top">
           <h1 class="title">双击图片放大观看</h1>
-          <span class="icon"></span>
+          <span class="icon" />
         </div>
         <img
           v-show="activeIndex === 0"
@@ -51,7 +51,12 @@
       </div>
     </transition>
     <transition name="krpano">
-      <krpano-view class="krpano" v-if="showKrpano" @remove="remove" :xml="items[activeIndex].xml"></krpano-view>
+      <krpano-view
+        v-if="showKrpano"
+        class="krpano"
+        :xml="items[activeIndex].xml"
+        @remove="remove"
+      />
     </transition>
   </div>
 </template>
@@ -60,7 +65,11 @@
 import krpano from '@/krpano/krpano'
 import tiptext from '@/tiptext/tiptext'
 export default {
-  data () {
+  components: {
+    krpanoView: krpano,
+    tiptext,
+  },
+  data() {
     return {
       activeIndex: 0,
       showKrpano: false,
@@ -71,39 +80,35 @@ export default {
           area: '134㎡',
           desc:
             '雅致三居，体会生活的妙趣；开门即见入户花园，把花朵和美景引入家中，与阳光绿意共筑生活；4.6米大面宽阳光客厅，格局方正严谨，彰显大家风范；5.9米豪华主卧，配备独立宽敞卫浴，朝南景观大飘窗，更显奢华生活；次卧别致的飘窗给予生活更多的巧思空间，阳光充分，亲和自然。',
-          xml: 'static/krpano/c/c.xml'
+          xml: 'static/krpano/c/c.xml',
         },
         {
           name: 'D户型',
           area: '119.3㎡',
           desc:
             '方正雅室，分区合理，减少浪费，空气婉转流畅，优越生活乐享；客厅联体观景阳台，宽敞视野，美景自然延入，通透明亮更显气势磅礴；主客卧双景观飘窗，延伸阳光四时映照，秀丽美景一览无余；依窗观景，笑傲红尘，悠然的，是一份事业与生活的从容；超大厨房连接专属生活阳台，居家从容，轻轻流露生活质感。',
-          xml: 'static/krpano/d/d.xml'
-        }
-      ]
+          xml: 'static/krpano/d/d.xml',
+        },
+      ],
     }
   },
   methods: {
-    handlShowMap () {
+    handlShowMap() {
       this.showMap = true
     },
-    handleHide () {
+    handleHide() {
       this.showMap = false
     },
-    hadnleSelect (index) {
+    hadnleSelect(index) {
       this.activeIndex = index
     },
-    handleselectKrpano () {
+    handleselectKrpano() {
       this.showKrpano = true
     },
-    remove () {
+    remove() {
       this.showKrpano = false
-    }
+    },
   },
-  components: {
-    krpanoView: krpano,
-    tiptext
-  }
 }
 </script>
 

@@ -1,30 +1,30 @@
 <template>
-    <div class="lxwm-wrapper">
-        <div class="logo">
-            <div class="logo-wrapper">
-                <span class="image"></span>
-            </div>
-        </div>
-
-        <div @click="phoneCall" class="tel">
-            <i class="iconfont icon-lianxi1 tel-icon"></i>
-            <span class="text">点击致电营销中心</span>
-        </div>
-        <div class="logo-bottom">
-            <div class="logo-bottom-wrapper">
-                <span class="image"></span>
-            </div>
-        </div>
+  <div class="lxwm-wrapper">
+    <div class="logo">
+      <div class="logo-wrapper">
+        <span class="image" />
+      </div>
     </div>
+
+    <div class="tel" @click="phoneCall">
+      <i class="iconfont icon-lianxi1 tel-icon" />
+      <span class="text">点击致电营销中心</span>
+    </div>
+    <div class="logo-bottom">
+      <div class="logo-bottom-wrapper">
+        <span class="image" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   methods: {
-    phoneCall () {
+    phoneCall() {
       window.location.href = 'tel:07174778899'
-    }
-  }
+    },
+  },
 }
 </script>
 
