@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <cover></cover>
-    <bottom ref="bottom"></bottom>
+    <cover />
+    <bottom ref="bottom" />
   </div>
 </template>
 
@@ -11,8 +11,8 @@ import bottom from '@/bottom/bottom'
 export default {
   components: {
     cover,
-    bottom
-  }
+    bottom,
+  },
 }
 </script>
 

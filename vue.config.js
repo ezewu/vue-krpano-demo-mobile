@@ -8,6 +8,7 @@ module.exports = {
   publicPath: '/',
   outputDir: 'dist',
   assetsDir: 'static',
+  runtimeCompiler: true,
   productionSourceMap: false,
   devServer: {
     port: 8080,
@@ -15,7 +16,6 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        vue$: 'vue/dist/vue.esm.js',
         '@': resolve('src/components'),
         '#': resolve('src/common'),
       },
